@@ -12,18 +12,30 @@ module tb ();
     #1;
   end
 
-  // Wire up the inputs and outputs:
-  reg clk;
-  reg rst_n;
-  reg ena;
-  reg [7:0] ui_in;
-  reg [7:0] uio_in;
-  wire [7:0] uo_out;
-  wire [7:0] uio_out;
-  wire [7:0] uio_oe;
+  // wire up the inputs and outputs
+    reg  clk;
+    reg  rst_n;
+    reg  ena;
+    //reg  [7:0] ui_in;
+    reg  [7:0] uio_in;
+    wire [7:0] uo_out;
+    wire [7:0] uio_out;
+    wire [7:0] uio_oe;
+    
+    reg enc0_a, enc0_b, enc1_a, enc1_b, enc2_a, enc2_b;
+    wire pwm0_out, pwm1_out, pwm2_out;
+    assign pwm0_out = uo_out[0];
+    assign pwm1_out = uo_out[1];
+    assign pwm2_out = uo_out[2];
+    //wire pwm1_out = uo_out[1];
+    //wire pwm2_out = uo_out[2];
+    
+    //wire [6:0] segments = uo_out[6:0];
+    //wire [7:0] uo_out;
+    
 
   // Replace tt_um_example with your module name:
-  tt_um_example user_project (
+  tt_um_rgb_mixer tt_um_rgb_mixer (
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
@@ -31,7 +43,7 @@ module tb ();
       .VGND(1'b0),
 `endif
 
-      .ui_in  (ui_in),    // Dedicated inputs
+      .ui_in  ({2'b0, enc2_b, enc2_a, enc1_b, enc1_a, enc0_b, enc0_a}),    // Dedicated inputs
       .uo_out (uo_out),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
       .uio_out(uio_out),  // IOs: Output path
