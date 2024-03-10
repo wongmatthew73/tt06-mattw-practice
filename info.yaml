@@ -44,8 +44,6 @@ how_it_works: |
       counter will increment by one each second.
 
       If any inputs are non zero, then the input will be used as an bits 11 to 18 of the 24 bit compare register.
-  Example: setting the inputs to 00010000 will program 16384 into the compare register.
-      With a 10MHz clock the counter will increment ~610 times per second.
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
 how_to_test:  |
