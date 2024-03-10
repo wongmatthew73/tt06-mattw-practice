@@ -74,14 +74,45 @@ documentation:
     - uo[7] 
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
-    - second counter bit 0
-    - second counter bit 1
-    - second counter bit 2
-    - second counter bit 3
-    - second counter bit 4
-    - second counter bit 5
-    - second counter bit 6
-    - second counter bit 7
+    - uio[0]
+    - uio[1]
+    - uio[2]
+    - uio[3] 
+    - uio[4] 
+    - uio[5] 
+    - uio[6] 
+    - uio[7] 
+    
+  pinout:
+    #Inputs
+    ui[0]: "enc0 a"
+    ui[1]: "enc0 b"
+    ui[2]: "enc1 a"
+    ui[3]: "enc1 b"
+    ui[4]: "enc2 a"
+    ui[5]: "enc2 b"
+    ui[6]: 
+    ui[7]:  
+    
+    #Outputs
+    uo[0]: "pwm0"
+    uo[1]: "pwm1"
+    uo[2]: "pwm2"
+    uo[3]: 
+    uo[4]: 
+    uo[5]: 
+    uo[6]: 
+    uo[7]:  
+    
+    #Bidirectional
+    uio[0]:
+    uio[1]:
+    uio[2]:
+    uio[3]: 
+    uio[4]: 
+    uio[5]: 
+    uio[6]: 
+    uio[7]:  
 
 # The following fields are optional
   tag:          "timer, test"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
