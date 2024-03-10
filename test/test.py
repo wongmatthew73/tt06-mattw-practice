@@ -7,6 +7,7 @@ from cocotb.triggers import RisingEdge, FallingEdge, ClockCycles
 import random
 from encoder import Encoder
 
+#Look into this number
 clocks_per_phase = 10
 
 async def reset(dut):

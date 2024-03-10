@@ -4,6 +4,8 @@ class Encoder():
 
     CYCLE = [ 1, 1, 0, 0 ]
 
+#Nothing changed
+
     # number of cycles at the edges of transitions vulnerable to bouncing
     # % chance of a bounce within the edges
     def __init__(self, clk, a, b, clocks_per_phase = 20, noise_cycles = 5, noise_chance = 0.5):

@@ -12,7 +12,7 @@ module tt_um_rgb_mixer (
 );
 
     wire reset = ! rst_n;
-    assign uio_oe = 8'b0;
+    assign uio_oe = 8'b0; //all set to 0.
     assign uio_out = 8'b0;
     assign uo_out[7:3] = 5'b0;
     

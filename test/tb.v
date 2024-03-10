@@ -44,7 +44,7 @@ module tb ();
 `endif
 
       .ui_in  ({2'b0, enc2_b, enc2_a, enc1_b, enc1_a, enc0_b, enc0_a}),    // Dedicated inputs
-      .uo_out (uo_out),   // Dedicated outputs
+      .uo_out (uo_out),   // Dedicated outputs (could not write as array)
       .uio_in (uio_in),   // IOs: Input path
       .uio_out(uio_out),  // IOs: Output path
       .uio_oe (uio_oe),   // IOs: Enable path (active high: 0=input, 1=output)

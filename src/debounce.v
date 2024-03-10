@@ -9,6 +9,7 @@ module debounce (
 
     reg [7:0] history;
     
+    //debounce
     always @(posedge clk) begin
     	if(reset) begin
     		history <= 0;

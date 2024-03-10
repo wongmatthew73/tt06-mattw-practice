@@ -19,6 +19,7 @@ module rgb_mixer (
     wire enc1_a_db, enc1_b_db;
     wire enc2_a_db, enc2_b_db;
     
+    //Instantiate 
     debounce debounce0_a (.clk(clk), .reset(reset), .button(enc0_a), .debounced(enc0_a_db));
     debounce debounce0_b (.clk(clk), .reset(reset), .button(enc0_b), .debounced(enc0_b_db));
     encoder encoder0 (.clk(clk), .reset(reset), .a(enc0_a_db), .b(enc0_b_db), .value(enc0));

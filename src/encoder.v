@@ -10,6 +10,7 @@ module encoder (
 
     reg old_a, old_b;
     
+    //Sets old values
     always @(posedge clk) begin
     	if(reset) begin
     		old_a <= 0;

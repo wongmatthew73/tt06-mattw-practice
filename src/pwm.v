@@ -24,6 +24,7 @@ module pwm #(
     	end
     end
     
+    //changed for tt06
     always @(posedge clk) begin
     	if(reset) begin
     		out <= 0;
