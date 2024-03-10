@@ -1,6 +1,10 @@
 --- 
 # Tiny Tapeout project information
 project:
+  author:       "Matt Wong" 
+  title:        "RGB Mixer Demo Practice"
+  language:     "Verilog" 
+  description:  "3 digital rotary encoder."    
   wokwi_id:    0        # If using wokwi, set this to your project's ID
 
 # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. 
@@ -49,24 +53,24 @@ documentation:
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
-    - compare bit 11
-    - compare bit 12
-    - compare bit 13
-    - compare bit 14
-    - compare bit 15
-    - compare bit 16
-    - compare bit 17
-    - compare bit 18
+    - ui[0] -> "enc0 a"
+    - ui[1] -> "enc0 b"
+    - ui[2] -> "enc1 a"
+    - ui[3] -> "enc1 b"
+    - ui[4] -> "enc2 a"
+    - ui[5] -> "enc2 b"
+    - ui[6] 
+    - ui[7] 
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - segment a
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - dot
+    - uo[0] -> "pwm0"
+    - uo[1] -> "pwm1"
+    - uo[2] -> "pwm2"
+    - uo[3] 
+    - uo[4] 
+    - uo[5] 
+    - uo[6] 
+    - uo[7] 
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
     - second counter bit 0
