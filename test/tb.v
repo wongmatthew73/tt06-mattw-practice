@@ -35,7 +35,7 @@ module tb ();
     
 
   // Replace tt_um_example with your module name:
-  tt_um_rgb_mixer tt_um_rgb_mixer (
+  tt_um_wm73_rgb_mixer tt_um_wm73_rgb_mixer (
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
