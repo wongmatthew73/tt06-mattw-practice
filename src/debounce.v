@@ -13,6 +13,7 @@ module debounce (
     always @(posedge clk) begin
     	if(reset) begin
     		history <= 0;
+    		debounced <= 0;
     	end
     	else begin
     		history <= { history[6:0], button };

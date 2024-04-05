@@ -22,6 +22,10 @@ module encoder (
     		old_b <= b;
     		
     		case({a,old_a,b,old_b})
+    		   //8'b00001000: value <= value + 1;
+    		   //8'b00000111: value <= value + 1;
+    		   //8'b00000010: value <= value - 1;
+    		   //8'b00001101: value <= value - 1;    
     		   4'b1000: value <= value + 1;
     		   4'b0111: value <= value + 1;
     		   4'b0010: value <= value - 1;

@@ -27,12 +27,7 @@ module tb ();
     assign pwm0_out = uo_out[0];
     assign pwm1_out = uo_out[1];
     assign pwm2_out = uo_out[2];
-    //wire pwm1_out = uo_out[1];
-    //wire pwm2_out = uo_out[2];
-    
-    //wire [6:0] segments = uo_out[6:0];
-    //wire [7:0] uo_out;
-    
+
 
   // Replace tt_um_example with your module name:
   tt_um_wm73_rgb_mixer tt_um_wm73_rgb_mixer (
@@ -44,6 +39,7 @@ module tb ();
 `endif
 
       .ui_in  ({2'b0, enc2_b, enc2_a, enc1_b, enc1_a, enc0_b, enc0_a}),    // Dedicated inputs
+      //.uo_out ({5'b0, pwm2_out, pwm1_out, pwm0_out}),   // Dedicated outputs (could not write as array)
       .uo_out (uo_out),   // Dedicated outputs (could not write as array)
       .uio_in (uio_in),   // IOs: Input path
       .uio_out(uio_out),  // IOs: Output path

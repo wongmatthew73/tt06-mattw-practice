@@ -11,23 +11,23 @@ module tt_um_wm73_rgb_mixer (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    wire reset = ! rst_n;
-    assign uio_oe = 8'b0; //all set to 0.
-    assign uio_out = 8'b0;
-    assign uo_out[7:3] = 5'b0;
+    wire rst = ! rst_n;
+    assign uio_oe = 8'b0000_0000; //all set to 0.
+    assign uio_out = 8'b0000_0000;
+    assign uo_out[7:3] = 5'b0_0000;
     
     rgb_mixer rgb_mixer(
-    .clk	(clk),
-    .reset	(reset),
-    .enc0_a	(ui_in[0]),
-    .enc0_b	(ui_in[1]),
-    .enc1_a	(ui_in[2]),
-    .enc1_b	(ui_in[3]),
-    .enc2_a	(ui_in[4]),
-    .enc2_b	(ui_in[5]),
-    .pwm0_out	(uo_out[0]),
-    .pwm1_out	(uo_out[1]),
-    .pwm2_out	(uo_out[2])
+    .clk(clk),
+    .reset(rst),
+    .enc0_a(ui_in[0]),
+    .enc0_b(ui_in[1]),
+    .enc1_a(ui_in[2]),
+    .enc1_b(ui_in[3]),
+    .enc2_a(ui_in[4]),
+    .enc2_b(ui_in[5]),
+    .pwm0_out(uo_out[0]),
+    .pwm1_out(uo_out[1]),
+    .pwm2_out(uo_out[2])
     
     );
    

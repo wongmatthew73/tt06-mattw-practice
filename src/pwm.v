@@ -27,7 +27,7 @@ module pwm #(
     //changed for tt06
     always @(posedge clk) begin
     	if(reset) begin
-    		out <= 0;
+    		out <= 1'b0;
     	end
     	else begin
     		out <= INVERT == 1'b0 ? pwm_on : ! pwm_on;
